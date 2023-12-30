@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="virusicon-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FIRST WEBSITE</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <i class="fa-solid fa-viruses"></i>
+    <style>
+        .fa-viruses {
+            font-size: 45px;
+            color: #e18307;
+            position: left top;
+            margin-left: 30px;
+            margin-top: 10px; 
+            top: 50%;
+            left: 10px;
+            transform: translate(-50%, -50%) rotateY(0deg);
+            animation: rotate3D 5s linear infinite;      
+        }
+        @keyframes rotate3D {
+            0% {
+                transform: translate(-50%, -50%) rotateY(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotateY(360deg);
+            }
+        }
+    </style>
+    
+    <style>
+
+        body {
+            font-family: "Lucida Console", "Courier New", monospace;
+            background-color: #24201d;
+            color: rgb(19, 16, 12);
+            margin: 45px;
+            
+
+        }
+
+        header {
+            background-color: #c8690b;
+            padding: 15px;
+            text-align: center;
+            animation: headerAnimation 2.0s ease-in-out;
+            position: relative;
+            transition: background 0.5s;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.8); 
+        }
+        
+        header:hover {
+            background: linear-gradient(0deg, rgba(92, 66, 30, 1) 0%, rgba(110, 78, 4, 1) 13%, rgba(230, 151, 22, 1) 52%, rgba(253, 187, 45, 1) 100%);
+            box-shadow: 0 0 20px rgba(255, 165, 0, 1); 
+    }
+
+        @keyframes headerAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #0b0b07;
+            padding: 10px;
+            
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0f0c08;
+            background-color:#d87c04;
+            color: black;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition: 0.5s;
+}
+        }
+
+        h1 {
+            color: #030202;
+        }
+
+        h2 {
+            color: #e18307;
+            display: inline-block;
+            border: 2px solid #020402;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            text-shadow: #e5650a;
+            transform: perspective(px) rotateY(deg);
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+            transition: box-shadow 0.1s;
+        }
+        
+        h2:hover {
+            box-shadow: 0 0 20px rgba(255, 165, 0, 1);
+        }
+
+
+        h3 {
+            color: #c96502;
+            display: inline-flexbox;
+            border: 2px solid #120e09;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            transform: perspective(px) rotateY(deg);
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+            transition: box-shadow 0.3s; 
+        }
+
+        h3:hover {
+            box-shadow: 0 0 20px rgba(255, 165, 0, 1);
+        }
+
+
+
+        p {
+            font-size: 17px;
+            line-height: 1.5;
+            transition: text-shadow 0.3s;
+        }
+        p:hover {
+            text-shadow: 0 0 10px rgba(255, 165, 0, 1); 
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        u {
+            text-decoration: underline;
+        }
+
+        blockquote {
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 10px solid #c96502;
+            border-right: 10px solid #c96502;
+            background-color: #d6ccaf;
+        }
+
+        q {
+            color: rgb(222, 104, 0), 117, 108);
+        }
+
+        
+        footer {
+            background-color: rgb(175, 61, 23) 11)9, 11);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>JOHN MICHAEL PH</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about Me">About Me</a>
+    </nav>
+
+    <h2>BSIT 1 FIRST YEAR</h2>
+    
+    <h3>AKO SI JM TAMAD AKO PERO MAY PANGARAP AKO!</h3>
+    
+    <p>Hi, I'm JOHN MICHAEL R. CABUG <strong>19 YEARS OF AGE</strong>. <em>I like you paren uwooo</em>, and <u>Maot ko</u> okay.</p>
+    
+    <blockquote>"YOLO You only live once".</blockquote>
+    
+    <q>i pass nako ni maam ell</q>
+
+    
+    <footer>
+        &copy; 2023 John Michael Web. All rights reserved.
+    </footer>
+
+</body>
+</html>

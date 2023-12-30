@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PERSONAL PORTFOLIO</title>
+    <style>
+      body {
+        font-family: "Lucida Console", "Courier New", monospace;
+        background-color: #24201d;
+        color: rgb(19, 16, 12);
+        margin: 45px;
+        text-align: center;
+        transition: background-color 0.5s;
+        min-height: 130vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      header {
+        background-color: #c8690b;
+        padding: 15px;
+        text-align: center;
+        letter-spacing: 30px;
+        position: relative;
+        transition: background 0.5s;
+        box-shadow: 5 10 20px rgba(255, 165, 0, 0.8);
+        font-family: "arial", cursive;
+        top: 0;
+        position: sticky;
+        z-index: 1000;
+      }
+
+      .image-slider-container {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        margin-top: 40px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .image-slide {
+        flex: 0 0 150px;
+        margin-right: 5px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .image-slide:hover {
+        transform: scale(0.8);
+        box-shadow: 0 0 30px rgb(240, 10, 10);
+      }
+
+      .image-slide img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      @media screen and (max-width: 800px) {
+        .image-slider-container {
+          flex-direction: column;
+          align-items: center;
+          max-width: 200%;
+        }
+
+        .image-slide {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+
+      header:hover {
+        background: linear-gradient(0deg, rgba(92, 66, 30, 1) 0%, rgba(110, 78, 4, 1) 13%, rgba(230, 151, 22, 1) 52%,
+            rgba(253, 187, 45, 1) 100%);
+        box-shadow: 0 0 20px rgba(255, 165, 0, 1);
+      }
+
+      header h1 {
+        text-shadow: 0 0 20px rgba(255, 165, 0, 1);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #0b0b07;
+        flex-direction: flex-start;
+        padding: 10px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #0f0c08;
+        background-color: #d87c04;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.5s;
+      }
+
+      .centered-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .centered-content img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-top: 10px;
+        transition: box-shadow 0.3s, transform 0.3s;
+      }
+
+      .centered-content img:hover {
+        box-shadow: 0 0 20px 5px rgba(255, 165, 0, 1);
+        transform: rotate(360deg);
+      }
+
+      .centered-content hr {
+        height: 40%;
+        width: 2px;
+        background-color: orangered;
+        margin: 10px;
+      }
+
+      .description-box {
+        background: linear-gradient(45deg, #ff5e00, #ff8b38);
+        color: rgb(201, 170, 170);
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+      }
+
+      .right-description {
+        background-color: transparent;
+        color: rgb(224, 89, 10);
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        max-width: 800px;
+        max-height: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: arial;
+        letter-spacing: 2px;
+        animation: typewriter 4s steps(40) infinite;
+      }
+
+      @keyframes typewriter {
+        from {
+          width: 0%;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
+
+      .centered-content img {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        margin-top: 10px;
+        transition: box-shadow 0.3s, transform 0.3s;
+      }
+
+      .centered-content img:hover {
+        box-shadow: 0 0 30px 10px rgba(255, 165, 0, 1);
+        transform: rotate(360deg);
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .social-icons a {
+        color: #f8f6f5;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 20px;
+        transition: transform 0.3s, color 0.3s, background 0.3s;
+        position: relative;
+      }
+
+      .social-icons i {
+        margin-right: 10px;
+      }
+
+      .social-icons a:hover {
+        transform: translateY(-9px);
+        color: #fff;
+        background: linear-gradient(45deg, #ff5e00, #ff8b38);
+        box-shadow: 0 0 20px 5px rgba(255, 165, 0, 1);
+      }
+
+      .additional-content {
+        background-color: #0b0b07;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-family: arial;
+      }
+
+      .glowing-text {
+        color: #d35b0b;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: 'arial';
+        text-shadow: 0 0 10px rgb(100, 94, 59), 0 0 20px rgb(212, 212, 212), 0 0 30px rgba(255, 215, 0, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: #fff;">JOHN MICHAEL PH</h1>
+    </header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#about Me">About Me</a>
+    </nav>
+    <div class="centered-content">
+      <hr>
+      <img src="bgmyprof.png" alt="Circle Image">
+      <div class="right-description">
+        <p>HI I'm John Michael Cabug 19 Years of age BS-IT 1ST YEAR</p>
+      </div>
+    </div>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/profile.php?id=61552504828926" target="_blank">
+        <i class="fab fa-facebook"></i> Facebook </a>
+      <a href="https://www.instagram.com/notfound_jm00/" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram </a>
+      <a href="https://www.youtube.com/channel/UCVUbpwx2uBZ3PwWtaV15CQQ" target="_blank">
+        <i class="fab fa-youtube"></i> YouTube </a>
+      <a href="https://www.tiktok.com/@jm.pdf8?_t=8i7R4LRAU9i&_r=1&fbclid=IwAR3dt3dd_Q2d20dX_3bScIsN6UA41lG4EfcndBMfyu-MfU4ZW8TmkqG2JGE" target="_blank">
+        <i class="fab fa-tiktok"></i> Tiktok </a>
+    </div>
+    <div class="glowing-text">
+      </h2>
+      <h2>MY FEATURED ACTIVITY </h2>
+      <div class="image-slider-container">
+        <div class="image-slide">
+          <img src="pic06.jpg" alt="Image 1">
+          <p>SERVE THE BALL</p>
+        </div>
+        <div class="image-slide">
+          <img src="222.jpg" alt="Image 2">
+          <p>SHADE</p>
+        </div>
+        <div class="image-slide">
+          <img src="pic05.jpg" alt="Image 3">
+          <p>BOUNCE THE BALL</p>
+        </div>
+        <div class="image-slide">
+          <img src="333.jpg" alt="Image 4">
+          <img src="444.jpg" alt="Image 4">
+          <p>EXTRA INCOME HAHA</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="blurred-description-box">
+      <div class="blurred-content">
+        <p>I'm John Michael Cabug, a first-year college student,and i'm currently pursuing a Bachelor of Science in Information Technology(BS-IT). Eager to explore the realm of technology, I navigate the exciting journey but stressful hehe of acadimia with curiosity and dedication. I combine my passion for IT with a commitment to learning. </p>
+      </div>
+      <div class="contact-section">
+        <div class="contact-content">
+          <h2>Contact Information</h2>
+          <div class="contact-info">
+            <a href="johncabug@gmail.com" target="_blank">Send Email</a>
+            <a href="09754778428">Phone</a>
+            <a href="https://maps.app.goo.gl/GzjKkKLHkRt4VMwR9" target="_blank">Address</a>
+          </div>
+        </div>
+      </div>
+      <div class="rating">
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5">★</label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4">★</label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3">★</label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2">★</label>
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1">★</label>
+      </div>
+      <label for="rating">Can You Rate My Portfolio</label>
+      <div class="rating"></div>
+    </div>
+    </div>
+    <style>
+      .blurred-description-box {
+        background: url('https://media.giphy.com/media/9JxkPTP3alOykb8PmQ/giphy.gif') center center/cover fixed;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        transition: box-shadow 0.3s, transform 0.3s;
+      }
+
+      .blurred-description-box:hover {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 1);
+        transform: scale(1.05);
+      }
+
+      .blurred-content {
+        text-align: center;
+        transition: font-weight 0.3s;
+      }
+
+      .blurred-description-box:hover .blurred-content {
+        font-weight: bold;
+        text-shadow: 0 0 10px rgba(255, 165, 0, 1);
+        font-family: arial;
+      }
+
+      .blurred-content {
+        text-align: center;
+      }
+
+      .contact-section {
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .contact-content {
+        background: #0b0b07;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        transform: translateZ(10px);
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .contact-content:hover {
+        transform: translateZ(20px);
+        box-shadow: 0 0 30px rgba(255, 165, 0, 1);
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .contact-info a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .contact-info a:hover {
+        color: #d87c04;
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          margin: 15px;
+        }
+
+        header {
+          letter-spacing: 10px;
+          background-color: green;
+        }
+
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav a {
+          padding: 10px;
+          font-size: 14px;
+        }
+
+        .centered-content img {
+          width: 150px;
+          height: 150px;
+        }
+
+        .right-description {
+          font-size: 16px;
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+          body {
+            color: gray;
+          }
+
+          @media screen and (min-width: 1025px) and (max-width: 1440px) {
+            body {
+              color: black;
+            }
+
+            @media screen and (min-width: 1441px) {}
+    </style>
+    <style>
+      .bottom-row {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
+
+      .box {
+        width: 120px;
+        height: 120px;
+        background-color: #000000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      }
+
+      footer {
+        background-color: #0b0b07;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        margin-top: auto;
+      }
+
+      .footer-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .footer-icons a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: transform 0.3s, color 0.3s;
+        position: relative;
+      }
+
+      .footer-icons i {
+        margin-right: 5px;
+      }
+
+      .footer-icons a:hover {
+        transform: translateY(-5px);
+        color: #d87c04;
+      }
+
+      .glowing-footer {
+        color: #d35b0b;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: 'arial';
+        text-shadow: 0 0 10px rgb(100, 94, 59), 0 0 20px rgb(212, 212, 212), 0 0 30px rgba(255, 215, 0, 1);
+      }
+
+      .rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .rating input {
+        display: none;
+      }
+
+      .rating label {
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .rating label:hover,
+      .rating label:hover~label {
+        color: #d87c04;
+      }
+
+      .rating input:checked~label {
+        color: #d87c04;
+      }
+    </style>
+    <footer>
+      <div class="footer-icons">
+        <a href="https://web.facebook.com/profile.php?id=61552504828926" target="_blank">
+          <i class="fab fa-facebook"></i>
+          <!-- Facebook icon -->
+        </a>
+        <a href="https://www.instagram.com/notfound_jm00/" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <!-- Instagram icon -->
+        </a>
+        <a href="https://www.youtube.com/channel/UCVUbpwx2uBZ3PwWtaV15CQQ" target="_blank">
+          <i class="fab fa-youtube"></i>
+          <!-- YouTube icon -->
+        </a>
+        <a href="https://www.tiktok.com/@jm.pdf8?_t=8i7R4LRAU9i&_r=1&fbclid=IwAR3dt3dd_Q2d20dX_3bScIsN6UA41lG4EfcndBMfyu-MfU4ZW8TmkqG2JGE" target="_blank">
+          <i class="fab fa-tiktok"></i>
+          <!-- TikTok icon -->
+        </a>
+      </div>
+      <div class="glowing-footer"> © 2023 John Michael PH. All rights reserved. </div>
+    </footer>
+  </body>
+</html>

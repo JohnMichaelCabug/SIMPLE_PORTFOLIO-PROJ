@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        *{
+    margin: 0;
+
+}
+.logo{
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 20px;
+    height: 60px;
+}
+
+.navbar ul{
+    list-style: none;
+    background-color: maroon;
+    text-align: right;
+    padding: 0;
+}
+.navbar li{
+    display: inline-block;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    display: block;
+    padding: 25px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial;
+    text-align: center;
+}
+.navbar a:hover {
+    color: orangered;
+    background-color: rgb(48, 102, 102);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+ul li :hover{
+    color: rgb(131, 112, 105);
+    box-shadow: 0 0 10px white;
+    background-color: waqua;
+
+} 
+
+.info{
+    margin-left: 7%;
+    margin-top: 6%;
+
+}
+
+.info h1{
+    font-size: 65px;
+    color: rgb(36, 32, 30);
+}
+
+.info h3{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+
+}
+
+.info span{
+    color: orangered;
+}
+
+.info a{
+ text-decoration: none;
+ color: white;
+ background:rgb(36, 32, 30);
+ margin: 26px 0;
+ padding: 10px 18px;
+ border-radius: 10px;
+ display: inline-block;
+ transition: 2s ease;
+ 
+}
+
+.info a:hover{
+    background: orangered;
+    
+
+}
+
+.image{
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+}
+
+.image img{
+   position: absolute;
+   height: 140%;
+   left: 50%;
+   transform: translate(-55%);
+   bottom: 0;
+   transition: left 2s ease;
+
+}
+
+.image:hover.pic1{
+   right:55%
+
+}
+    </style>
+    <body>
+
+        <div class="main">
+            <div class="navbar">
+                <img src="logo.png" class="logo">
+
+                <ul>
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">ABOUT</a></li>
+                  <li><a href="#">PORTFOLIO</a></li>
+                  <li><a href="#">CONTACT</a></li>
+                  
+                  
+                </ul>
+
+                <div class="info">
+                    <h3>Hi, I'm <span>Kim</span>
+                    <h1> <span>W</span>EB <span>D</span>ESIGNER</h1>
+                    <h3>Web designer and developer from Iligan City I create <br>website to do businesses do better <br> online.</h3>
+                       <a href="https://web.facebook.com/profile.php?id=61552504828926">fuckme</a>
+         <div>
+        
+        <div class="image">
+          <img src="pic1.png" class="pic1">
+         </div>
+
+
+       </div>
+       <div class="icons">
+        <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://www.tiktok.com"><ion-icon name="logo-tiktok"></ion-icon></a>
+    </div>
+</div>
+    </style>
+    
+</html>
